@@ -30,6 +30,7 @@ class HostConsumer(AsyncWebsocketConsumer):
     async def receive(self, text_data):
         message = json.loads(text_data)
         msgType = message['msgType']
+        print(f'Received {msgType}')
         
         if  msgType == 'msgNext':
             state = self.session.getSessionState()
