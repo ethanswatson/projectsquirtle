@@ -54,6 +54,7 @@ let connectToSocket = function(roomName, quizName) {
     var data = JSON.parse(e.data);
     var message = data['message'];
     var msgType = data['msgType'];
+    console.log(`Received Message ${msgType}`);
     if (msgType == 'msgJoin') {
       landingAddUser(message['userName']);
     } else if (msgType == 'msgVote') {
