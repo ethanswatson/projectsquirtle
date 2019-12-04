@@ -6,3 +6,4 @@ migrations/
 squirtleenv/
 src/static/
 env/
+dump.rdb
